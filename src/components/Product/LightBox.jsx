@@ -1,3 +1,6 @@
+import iconClose from "../../assets/images/icon-close.svg";
+import iconPrev from "../../assets/images/icon-previous.svg";
+import iconNext from "../../assets/images/icon-next.svg";
 import "./Lightbox.scss";
 
 function Lightbox({ images, index, setIndex, onClose }) {
@@ -8,7 +11,7 @@ function Lightbox({ images, index, setIndex, onClose }) {
     <div className="lightbox-overlay desktop-only">
       <div className="lightbox">
         <button className="close" onClick={onClose} aria-label="close">
-          <img src="/src/assets/images/icon-close.svg" alt="close" />
+          <img src={iconClose} alt="close" />
         </button>
 
         <div className="lb-main-wrap">
@@ -17,7 +20,7 @@ function Lightbox({ images, index, setIndex, onClose }) {
             onClick={prev}
             aria-label="previous"
           >
-            <img src="/src/assets/images/icon-previous.svg" alt="previous" />
+            <img src={iconPrev} alt="previous" />
           </button>
 
           <img
@@ -27,7 +30,7 @@ function Lightbox({ images, index, setIndex, onClose }) {
           />
 
           <button className="lb-arrow right" onClick={next} aria-label="next">
-            <img src="/src/assets/images/icon-next.svg" alt="next" />
+            <img src={iconNext} alt="next" />
           </button>
         </div>
 

@@ -1,4 +1,5 @@
 import QuantitySelector from "./QuantitySelector";
+import iconCart from "../../assets/images/icon-cart.svg";
 import "./ProductInfo.scss";
 
 function ProductInfo({ product, cart }) {
@@ -21,7 +22,7 @@ function ProductInfo({ product, cart }) {
       <div className="actions">
         <QuantitySelector cart={cart} />
         <button className="add-btn" onClick={addToCart}>
-          <img src="/src/assets/images/icon-cart.svg" alt="cart" />
+          <img src={iconCart} alt="cart" />
           Add to cart
         </button>
       </div>

@@ -3,6 +3,7 @@ import Header from "./components/Header/Header";
 import ProductPage from "./components/Product/ProductPage";
 import CartDropdown from "./components/Header/CartDropdown";
 import Attribution from "./components/Attribution";
+import thumbnail from "./../src/assets/images/image-product-1-thumbnail.jpg";
 import "./App.scss";
 
 const PRODUCT = {
@@ -14,7 +15,7 @@ const PRODUCT = {
   price: 125,
   oldPrice: 250,
   discount: 50,
-  thumb: "/src/assets/images/image-product-1-thumbnail.jpg",
+  thumb: thumbnail,
 };
 
 function App() {

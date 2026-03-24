@@ -1,5 +1,8 @@
 import { useState } from "react";
 import MobileMenu from "./MobileMenu";
+import logo from "../../assets/images/logo.svg";
+import cartIcon from "../../assets/images/icon-cart.svg";
+import avatar from "../../assets/images/image-avatar.png";
 import "./Header.scss";
 
 const links = ["Collections", "Men", "Women", "About", "Contact"];
@@ -13,7 +16,7 @@ function Header({ cart }) {
       <div className="container header">
         <div className="header__left">
           <MobileMenu links={links} />
-          <img src="/src/assets/images/logo.svg" alt="logo" className="logo" />
+          <img src={logo} alt="logo" className="logo" />
 
           <nav className="nav desktop-only">
             <ul>
@@ -38,15 +41,11 @@ function Header({ cart }) {
             aria-label="cart"
             aria-expanded={isCartOpen}
           >
-            <img src="/src/assets/images/icon-cart.svg" alt="cart-icon" />
+            <img src={cartIcon} alt="cart-icon" />
             {cartCount > 0 && <span className="cart-count">{cartCount}</span>}
           </button>
 
-          <img
-            src="/src/assets/images/image-avatar.png"
-            alt="avatar"
-            className="avatar"
-          />
+          <img src={avatar} alt="avatar" className="avatar" />
         </div>
       </div>
     </header>

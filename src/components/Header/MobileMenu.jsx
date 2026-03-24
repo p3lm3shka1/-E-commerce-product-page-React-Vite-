@@ -1,5 +1,6 @@
 import { useState } from "react";
-import "./MobileMenu.scss";
+import iconMenu from "../../assets/images/icon-menu.svg";
+import iconClose from "../../assets/images/icon-close.svg";
 
 function MobileMenu({ links }) {
   const [open, setOpen] = useState(false);
@@ -11,7 +12,7 @@ function MobileMenu({ links }) {
         onClick={() => setOpen(true)}
         aria-label="Open menu"
       >
-        <img src="/src/assets/images/icon-menu.svg" alt="menu" />
+        <img src={iconMenu} alt="menu" />
       </button>
 
       {open && (
@@ -19,7 +20,7 @@ function MobileMenu({ links }) {
           <div className="overlay" onClick={() => setOpen(false)} />
           <aside className="drawer">
             <button className="close" onClick={() => setOpen(false)}>
-              <img src="/src/assets/images/icon-close.svg" alt="close" />
+              <img src={iconClose} alt="close" />
             </button>
             <ul>
               {links.map((link) => (

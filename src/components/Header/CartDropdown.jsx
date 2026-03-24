@@ -1,4 +1,5 @@
 import "./CartDropdown.scss";
+import iconDelete from "../../assets/images/icon-delete.svg";
 
 function CartDropdown({ cart }) {
   const { cartItem, removeFromCart } = cart;
@@ -33,7 +34,7 @@ function CartDropdown({ cart }) {
               aria-label="Remove item"
               type="button"
             >
-              <img src="/src/assets/images/icon-delete.svg" alt="delete icon" />
+              <img src={iconDelete} alt="delete icon" />
             </button>
           </div>
 
