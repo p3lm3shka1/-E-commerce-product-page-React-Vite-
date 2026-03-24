@@ -1,0 +1,123 @@
+@use "../../styles/variables" as *;
+@use "../../styles/media" as *;
+
+.cart-dropdown {
+  width: 360px;
+  background: $white;
+  border-radius: 10px;
+  box-shadow: 0 24px 40px rgba(0, 0, 0, 0.18);
+  overflow: hidden;
+
+  h3 {
+    margin: 0;
+    padding: $p-1-5;
+    font-size: 1.8rem;
+    line-height: 1;
+    font-weight: $f-bold;
+    color: $very-dark-blue;
+  }
+
+  .divider {
+    height: 1px;
+    background: #ececf2;
+  }
+
+  .empty {
+    min-height: 188px;
+    display: grid;
+    place-items: center;
+    color: $dark-grayish-blue;
+    font-weight: $f-bold;
+    font-size: 1rem;
+    padding: $p-1;
+    text-align: center;
+  }
+
+  .content {
+    padding: $p-1-5;
+  }
+
+  .item {
+    display: grid;
+    grid-template-columns: 50px 1fr auto;
+    align-items: center;
+    gap: $p-1;
+    margin-bottom: $p-1-5;
+  }
+
+  .item-thumb {
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+    object-fit: cover;
+  }
+
+  .item-info {
+    min-width: 0;
+  }
+
+  .item-info p {
+    margin: 0;
+    color: $dark-grayish-blue;
+    line-height: 1.35;
+    font-size: 2rem;
+  }
+
+  .item-info p:first-child {
+    margin-bottom: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .item-info strong {
+    color: $very-dark-blue;
+    font-weight: $f-bold;
+  }
+
+  .delete-btn {
+    display: grid;
+    place-items: center;
+    opacity: 0.55;
+    transition: opacity 0.2s ease;
+  }
+
+  .delete-btn:hover {
+    opacity: 1;
+  }
+
+  .checkout-btn {
+    width: 100%;
+    min-height: 56px;
+    border-radius: 10px;
+    background: $orange;
+    color: $very-dark-blue;
+    font-weight: $f-bold;
+    font-size: 2rem;
+    letter-spacing: 0.01em;
+    transition:
+      opacity 0.2s ease,
+      transform 0.06s ease;
+  }
+
+  .checkout-btn:hover {
+    opacity: 0.75;
+  }
+
+  .checkout-btn:active {
+    transform: translateY(1px);
+  }
+}
+.cart-dropdown {
+  h3 {
+    font-size: 1rem;
+  }
+
+  .item-info p {
+    font-size: 1rem;
+  }
+
+  .checkout-btn {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,86 @@
+@use "../../styles/variables" as *;
+@use "../../styles/media" as *;
+
+.header-wrap {
+  position: relative;
+  z-index: 100;
+
+  .header {
+    height: 112px;
+    border-bottom: 1px solid $grayish-blue;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    pointer-events: auto;
+  }
+
+  .header__left,
+  .header__right {
+    display: flex;
+    align-items: center;
+    gap: $p-2;
+  }
+
+  .logo {
+    width: 138px;
+  }
+
+  .nav ul {
+    display: flex;
+    gap: $p-1-5;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav button {
+    color: $dark-grayish-blue;
+    padding: 2.85rem 0;
+    border-bottom: 4px solid transparent;
+    transition:
+      color 0.2s ease,
+      border-color 0.2s ease;
+  }
+
+  .nav button:hover,
+  .nav button.active {
+    color: $very-dark-blue;
+    border-color: $orange;
+  }
+
+  .cart-btn {
+    position: relative;
+    opacity: 0.75;
+    transition: opacity 0.2s ease;
+  }
+
+  .cart-btn:hover {
+    opacity: 1;
+  }
+
+  .cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: $orange;
+    color: $white;
+    font-size: 11px;
+    padding: 1px 7px;
+    border-radius: 999px;
+    font-weight: $f-bold;
+    line-height: 1.1;
+  }
+
+  .avatar {
+    width: 50px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    transition: border-color 0.2s ease;
+    cursor: pointer;
+  }
+
+  .avatar:hover {
+    border-color: $orange;
+  }
+}

@@ -1,0 +1,16 @@
+@use "../styles/variables" as *;
+
+.attribution {
+  text-align: center;
+  color: $very-dark-blue;
+
+  a {
+    text-decoration: none;
+    color: $orange;
+    opacity: 0.7;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

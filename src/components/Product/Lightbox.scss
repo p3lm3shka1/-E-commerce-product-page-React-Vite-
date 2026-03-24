@@ -1,0 +1,67 @@
+@use "../../styles/variables" as *;
+@use "../../styles/media" as *;
+
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: $black;
+  z-index: 999;
+  display: grid;
+  place-items: center;
+}
+
+.lightbox {
+  width: 550px;
+
+  .close {
+    margin-left: auto;
+    display: block;
+    margin-bottom: $p-1;
+  }
+
+  .lb-main-wrap {
+    position: relative;
+  }
+
+  .lb-main {
+    border-radius: 16px;
+  }
+
+  .lb-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: $white;
+    display: grid;
+    place-items: center;
+  }
+
+  .lb-arrow.left {
+    left: -28px;
+  }
+
+  .lb-arrow.right {
+    right: -28px;
+  }
+
+  .lb-thumbs {
+    margin-top: $p-2;
+    display: flex;
+    justify-content: center;
+    gap: $p-1-5;
+  }
+
+  .thumb {
+    width: 88px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 2px solid transparent;
+  }
+
+  .thumb.active {
+    border-color: $orange;
+  }
+}

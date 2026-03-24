@@ -1,0 +1,53 @@
+@use "./variables" as *;
+@use "./media" as *;
+
+* {
+  box-sizing: border-box;
+  transition:
+    opacity 0.2s ease,
+    transform 0.06s ease;
+}
+body {
+  margin: 0;
+  font-family: $font-primary;
+  color: $very-dark-blue;
+  background: $white;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+button {
+  font: inherit;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+.container {
+  width: min(1110px, calc(100% - $p-3));
+  margin-inline: auto;
+}
+
+.mobile-only {
+  display: none;
+}
+
+.cart-floating-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.cart-floating-anchor {
+  width: min(1110px, calc(100% - $p-3));
+  margin-inline: auto;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: $p-4;
+  pointer-events: none;
+}
+
+.cart-floating-anchor .cart-dropdown {
+  pointer-events: auto;
+}
