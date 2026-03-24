@@ -40,7 +40,7 @@ npm install
 npm run dev
 ```
 
-Or [Demo]
+Or [Demo](https://e-commerce-product-page-react-vite.vercel.app/)
 
 ## Author
 
